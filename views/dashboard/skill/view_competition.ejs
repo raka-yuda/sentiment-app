@@ -1,0 +1,31 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">List of Contest</h1>
+    
+    <% dataCompetition.dataCompetition.forEach(dataByCategory => { %>
+        <p class="mb-4">Category of : <%= dataByCategory.category.charAt(0).toUpperCase() + dataByCategory.category.slice(1) %></p>
+        <div class="row">
+            <% dataByCategory.data.forEach(data => { %>
+                <div class="col-xl-2 col-md-6 mb-4">
+                    <a class="card shadow mb-4 rounded" href="<%= data.linkCompetition %>">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Contest</h6>
+                        </div>
+                        <div style="position: relative; ">
+                            <img class="card-img-bottom" src="<%= data.imageSrcCompetition %>" alt="Card image cap" style="height:12rem; object-fit: cover;" onerror="this.onerror=null; this.src='/images/none-bg.png'">
+                            <div class="d-flex position-absolute fixed-bottom w-100 h-100 rounded"  style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);"></div>
+                            <div class="d-flex position-absolute fixed-bottom px-3">
+                                <p class="text-white"><%= data.titleCompetition %></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    <% }) %>
+    
+</div>
+
+<!-- /.container-fluid -->

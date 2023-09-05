@@ -1,0 +1,47 @@
+    <!-- Bootstrap core JavaScript-->
+    <script src="/sb-admin/vendor/jquery/jquery.min.js"></script>
+    <script src="/sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/sb-admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/sb-admin/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/sb-admin/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/sb-admin/js/demo/chart-area-demo.js"></script>
+    <script src="/sb-admin/js/demo/chart-pie-demo.js"></script>
+
+      <!-- Page level plugins -->
+      <script src="/sb-admin/vendor/datatables/jquery.dataTables.min.js"></script>
+      <script src="/sb-admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  
+      <script type="text/javascript" src="libs/FileSaver/FileSaver.min.js"></script>
+
+      <script type="text/javascript" src="libs/js-xlsx/xlsx.core.min.js"></script>
+
+
+      <script>
+        $(document).ready(function () {
+            $('#table-list-competition').DataTable({
+                processing: true,
+                serverSide: true,
+                // pagingType: "full_numbers",
+                paging: true,
+                bFilter: false,
+                // lengthMenu: [10, 25, 50, 75, 100],
+                ajax: `${window.location.origin}/scrape/list-competition`,
+                // dom: 'Bfrtip',
+                // buttons: [
+                //     'copy', 'csv', 'excel', 'pdf', 'print'
+                // ]
+            });
+        });
+
+    </script>
+    
+  </body>
+</html>
