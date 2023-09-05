@@ -1,8 +1,8 @@
-# **Compete App**
+# **Sentiment App**
 
 [![ExpressJS](https://img.shields.io/badge/ExpressJS-v.4.16.1-brightgreen)]()
 
-> Dashboard app pulling list for upskilling college student
+> Dashboard app pulling trending tweet and do sentiment
 
 ## **Table of Contents :**
 
